@@ -13,7 +13,7 @@
 
 	<name>Simple project with utilities for stand alone tool</name>
 	<description>This tool focus on providing utilities for cli and documentation generation</description>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 
 	<licenses>
 		<license>
@@ -105,7 +105,6 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
-						<version>3.3.0</version>
 						<configuration>
 							<archive>
 								<manifest>
@@ -142,7 +141,6 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-shade-plugin</artifactId>
-						<version>3.5.1</version>
 						<executions>
 							<execution>
 								<phase>package</phase>
