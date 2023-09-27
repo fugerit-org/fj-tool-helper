@@ -13,7 +13,7 @@
 
 	<name>Simple project with utilities for stand alone tool</name>
 	<description>This tool focus on providing utilities for cli and documentation generation</description>
-	<version>0.1.0</version>
+	<version>0.1.1-SNAPSHOT</version>
 
 	<licenses>
 		<license>
@@ -83,10 +83,6 @@
 		<profile>
 			<id>singlepackage</id>
 			<dependencies>
-				<dependency>
-					<groupId>org.apache.poi</groupId>
-					<artifactId>poi-ooxml</artifactId>
-				</dependency>
 				<dependency>
 					<groupId>org.apache.logging.log4j</groupId>
 				    <artifactId>log4j-api</artifactId>
