@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool-help-config>
+
+	<toolName>Fugerit tool helper</toolName>
+	
+	<toolDescription>Utility to build documentation for command line tools.</toolDescription>
+	
+	<commandExample>java -jar target/dist-fj-tool-helper-*.jar \
+ --tool-help-config-path src/main/resources/tool/tool-help-config.xml \
+ --output-file target/help.md \
+ --output-format md
+	</commandExample>
+	
+	<param>
+		<id>`tool-help-config-path`</id>
+		<required>`true`</required>
+		<defaultValue>none</defaultValue>
+		<description>Path to tool-help-config xml file.</description>
+		<since>0.1.0</since>
+		<info>By default the path will be looked on file system, to search in classpath prefix with cl://</info>
+	</param>
+	
+	<param>
+		<id>`output-file`</id>
+		<required>`true`</required>
+		<defaultValue>none</defaultValue>
+		<description>Path to the the file to create.</description>
+		<since>0.1.0</since>
+		<info>Must be a physical file</info>
+	</param>
+	
+	<param>
+		<id>`output-format`</id>
+		<required>`true`</required>
+		<defaultValue>none</defaultValue>
+		<description>Output format, currently accepted formats are md (markdown), html, pdf, txt.</description>
+		<since>0.1.0</since>
+		<info>The output will be generated via Venus Fugerit document generation framework (https://github.com/fugerit-org/fj-doc).</info>
+	</param>
+	
+	<param>
+		<id>`exclude-info`</id>
+		<required>`false`</required>
+		<defaultValue>`false`</defaultValue>
+		<description>If set to `true`, the 'info' columns of tool parameters will be ignored.</description>
+		<since>0.1.0</since>
+		<info>The output will be generated via Venus Fugerit document generation framework (https://github.com/fugerit-org/fj-doc).</info>
+	</param>
+
+	<param>
+		<id>`help`</id>
+		<required>`false`</required>
+		<defaultValue>none</defaultValue>
+		<description>Print help about the tool.</description>
+		<since>0.1.0</since>
+		<info>In case of errors the help will be printed too.</info>
+	</param>
+
+</tool-help-config>

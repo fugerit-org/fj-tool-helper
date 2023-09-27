@@ -1,0 +1,21 @@
+# Fugerit tool helper  
+
+Utility to build documentation for command line tools.  
+
+Example : java -jar target/dist-fj-tool-helper-*.jar \
+ --tool-help-config-path src/main/resources/tool/tool-help-config.xml \
+ --output-file target/help.md \
+ --output-format md  
+
+## parameter help  
+
+	--tool-help-config-path <arg> Path to tool-help-config xml file. [default:none]
+
+	--output-file <arg> Path to the the file to create. [default:none]
+
+	--output-format <arg> Output format, currently accepted formats are md (markdown), html, pdf, txt. [default:none]
+
+	--exclude-info <arg> If set to `true`, the 'info' columns of tool parameters will be ignored.
+
+	--help <arg> Print help about the tool. [default:none]
+
