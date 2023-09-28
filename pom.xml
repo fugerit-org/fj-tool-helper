@@ -14,7 +14,7 @@
 
 	<name>Simple project with utilities for stand alone tool</name>
 	<description>This tool focus on providing utilities for cli and documentation generation</description>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 
 	<licenses>
 		<license>
