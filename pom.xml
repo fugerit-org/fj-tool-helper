@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.fugerit.java.universe</groupId>
 		<artifactId>fj-universe</artifactId>
-		<version>0.4.5-rc.3</version>
+		<version>0.4.5-rc.5</version>
 		<relativePath></relativePath>
 	</parent>
 
@@ -51,6 +51,11 @@
 			<groupId>org.fugerit.java</groupId>
 			<artifactId>fj-doc-mod-fop</artifactId>
 		</dependency>		
+		
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-tool-util</artifactId>
+		</dependency>	
 		
 		<dependency>
 			<groupId>org.projectlombok</groupId>

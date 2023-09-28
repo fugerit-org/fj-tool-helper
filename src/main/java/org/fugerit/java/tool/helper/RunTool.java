@@ -4,14 +4,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Properties;
 
-import org.fugerit.java.core.cfg.ConfigRuntimeException;
 import org.fugerit.java.core.cli.ArgUtils;
 import org.fugerit.java.core.function.SafeFunction;
 import org.fugerit.java.core.io.SafeIO;
 import org.fugerit.java.core.lang.helpers.ClassHelper;
-import org.fugerit.java.core.lang.helpers.StringUtils;
 import org.fugerit.java.tool.helper.config.ToolHelpConfig;
 import org.fugerit.java.tool.helper.facade.ToolHelpFacade;
+import org.fugerit.java.tool.util.ArgHelper;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -30,14 +29,6 @@ public class RunTool {
 	
 	public static final String ARG_HELP = "help";
 	
-	private static void checkRequired( String ...params ) {
-		for ( int k=0; k<params.length; k++ ) {
-			if ( StringUtils.isEmpty( params[k] ) ) {
-				throw new ConfigRuntimeException( "Required parameter "+params[k] );
-			}
-		}
-	}
-	
 	private static void printHelp() {
 		log.info( "help : \n\n{}", SafeIO.readStringStream( () -> ClassHelper.loadFromDefaultClassLoader( "tool/help.txt" ) ) );
 	}
@@ -49,10 +40,10 @@ public class RunTool {
 			printHelp();
 		} else {
 			SafeFunction.apply( () -> {
+				ArgHelper.checkAllRequiredThrowRuntimeEx(params, ARG_TOOL_HELP_CONFIG_PATH, ARG_OUTPUT_FILE, ARG_OUTPUT_FORMAT);
 				String toolHelpConfigPath = params.getProperty( ARG_TOOL_HELP_CONFIG_PATH );
 				String outputFile = params.getProperty( ARG_OUTPUT_FILE );
 				String outputFormat = params.getProperty( ARG_OUTPUT_FORMAT );
-				checkRequired( toolHelpConfigPath, outputFile, outputFormat );
 				String excludeInfo = params.getProperty( ARG_EXCLUDE_INFO );
 				log.debug( "param exclude-info not yet supported : {}", excludeInfo );
 				File file = new File( outputFile );
