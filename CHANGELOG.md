@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.2] - 2023-09-28
 
+### Changed
+
+- fj-universe-tool parent set to 0.4.6
+
 ### Fixed
 
 - default value generation in 'txt' handler.
