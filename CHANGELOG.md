@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - fj-tool-util dependency
 - github workflow for build and sonar cloud analysis 
 
+### Changed
+
+- fj-universe-tool parent set to 0.4.5
+
 ## [0.1.0] - 2023-09-28
 
 ### Added
