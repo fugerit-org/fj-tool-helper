@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - fj-tool-util dependency
+- github workflow for build and sonar cloud analysis 
 
 ## [0.1.0] - 2023-09-28
 
