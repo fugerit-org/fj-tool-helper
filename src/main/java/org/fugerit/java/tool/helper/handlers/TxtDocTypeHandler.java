@@ -154,7 +154,7 @@ class TxtFacade extends DocTypeFacadeDefault {
 			if ( BooleanUtils.isTrue( required ) ) {
 				line+= " [required]";
 			}
-			if ( "none".equalsIgnoreCase( defaultValue ) && StringUtils.isNotEmpty( defaultValue ) ) {
+			if ( !"none".equalsIgnoreCase( defaultValue ) && StringUtils.isNotEmpty( defaultValue ) ) {
 				line+= " [default:"+defaultValue+"]";
 			}
 			this.getWriter().println(line);
