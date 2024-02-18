@@ -8,13 +8,13 @@
 	<parent>
 		<groupId>org.fugerit.java.universe</groupId>
 		<artifactId>fj-universe</artifactId>
-		<version>0.4.6</version>
+		<version>0.5.8</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<name>Simple project with utilities for stand alone tool</name>
 	<description>This tool focus on providing utilities for cli and documentation generation</description>
-	<version>0.1.2</version>
+	<version>1.0.0</version>
 
 	<licenses>
 		<license>
